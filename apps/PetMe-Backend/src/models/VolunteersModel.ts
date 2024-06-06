@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from '../db';
 import IStatusMap from '../interfaces/StatusMap/StatusMap';
 import { IVolunteerData, IVolunteerUserModel,  } from '../interfaces/DonateUser/VolunteerUser';
 
 export default class VolunteerUserModel {
-  private prisma = new PrismaClient();
+  private prisma = prisma;
 
   async getVolunteerUserById(id: number): Promise<IVolunteerUserModel | null> {
     const donateUser = await this.prisma.volunteer_User.findUnique({
