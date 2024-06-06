@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Donate_User {
+  id           Int           @id @default(autoincrement())
+  first_name   String
+  last_name    String?
+  email        String        @unique
+  address      String
+  city         String
+  state        String
+  country      String
+  zip_code     String
+  phone_number String
+  Donate_Pets  Donate_Pets[]
+}
+
+model Volunteer_User {
+  id           Int     @id @default(autoincrement())
+  first_name   String
+  last_name    String?
+  email        String  @unique
+  address      String
+  city         String
+  state        String
+  country      String
+  zip_code     String
+  phone_number String
+}
+
+model Donate_Pets {
+  donate_user_id Int
+  pet_id         Int
+  id             Int         @id @default(autoincrement())
+  donate_user    Donate_User @relation(fields: [donate_user_id], references: [id])
+  pet            Pets        @relation(fields: [pet_id], references: [id])
+}
+
+model Pets {
+  id          Int           @id @default(autoincrement())
+  name        String
+  color_id    Int
+  breed_id    Int
+  type_id     Int
+  Donate_Pets Donate_Pets[]
+  pet_breed   Pet_Breed     @relation(fields: [breed_id], references: [id])
+  pet_color   Pet_Color     @relation(fields: [color_id], references: [id])
+  pet_type    Pet_Type      @relation(fields: [type_id], references: [id])
+}
+
+model Pet_Type {
+  id   Int    @id @default(autoincrement())
+  name String
+  Pets Pets[]
+}
+
+model Pet_Breed {
+  id   Int    @id @default(autoincrement())
+  name String
+  Pets Pets[]
+}
+
+model Pet_Color {
+  id   Int    @id @default(autoincrement())
+  name String
+  Pets Pets[]
+}
+
+model Support_User {
+  id           Int     @id @default(autoincrement())
+  first_name   String
+  last_name    String?
+  email        String  @unique
+  address      String
+  city         String
+  state        String
+  country      String
+  zip_code     String
+  phone_number String
+}
