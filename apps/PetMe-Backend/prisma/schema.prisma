@@ -7,47 +7,67 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Donate_User {
-  id           Int           @id @default(autoincrement())
-  first_name   String
-  last_name    String?
-  email        String        @unique
-  address      String
-  city         String
-  state        String
-  country      String
-  zip_code     String
-  phone_number String
-  Donate_Pets  Donate_Pets[]
+model User {
+  id            String         @id @default(uuid())
+  first_name    String
+  last_name     String?
+  email         String         @unique
+  password      String
+  address       String
+  google_id     String?
+  city          String
+  auth_provider AUTH_PROVIDER?
+  state         String
+  country       String
+  zip_code      String
+  phone_number  String
+  role          String[]
+  Donate_Pets   Donate_Pets[]
+  verfied_flag  Boolean
+  Blog          Blog[]
 }
 
-model Volunteer_User {
-  id           Int     @id @default(autoincrement())
-  first_name   String
-  last_name    String?
-  email        String  @unique
-  address      String
-  city         String
-  state        String
-  country      String
-  zip_code     String
-  phone_number String
-}
+// model Donate_User {
+//   id           Int           @id @default(uuid())
+//   first_name   String
+//   last_name    String?
+//   email        String        @unique
+//   address      String
+//   city         String
+//   state        String
+//   country      String
+//   zip_code     String
+//   phone_number String
+//   Donate_Pets  Donate_Pets[] 
+// }
+
+// model Volunteer_User {
+//   id           Int     @id @default(uuid())
+//   first_name   String
+//   last_name    String?
+//   email        String  @unique
+//   address      String
+//   city         String
+//   state        String
+//   country      String
+//   zip_code     String
+//   phone_number String
+// }
 
 model Donate_Pets {
-  donate_user_id Int
-  pet_id         Int
-  id             Int         @id @default(autoincrement())
-  donate_user    Donate_User @relation(fields: [donate_user_id], references: [id])
-  pet            Pets        @relation(fields: [pet_id], references: [id])
+  donate_user_id String
+  pet_id         String
+  id             String @id @default(uuid())
+  user           User   @relation(fields: [donate_user_id], references: [id])
+  pet            Pets   @relation(fields: [pet_id], references: [id])
 }
 
 model Pets {
-  id          Int           @id @default(autoincrement())
+  id          String        @id @default(uuid())
   name        String
-  color_id    Int
-  breed_id    Int
-  type_id     Int
+  color_id    String
+  breed_id    String
+  type_id     String
   Donate_Pets Donate_Pets[]
   pet_breed   Pet_Breed     @relation(fields: [breed_id], references: [id])
   pet_color   Pet_Color     @relation(fields: [color_id], references: [id])
@@ -55,25 +75,25 @@ model Pets {
 }
 
 model Pet_Type {
-  id   Int    @id @default(autoincrement())
+  id   String @id @default(uuid())
   name String
   Pets Pets[]
 }
 
 model Pet_Breed {
-  id   Int    @id @default(autoincrement())
+  id   String @id @default(uuid())
   name String
   Pets Pets[]
 }
 
 model Pet_Color {
-  id   Int    @id @default(autoincrement())
+  id   String @id @default(uuid())
   name String
   Pets Pets[]
 }
 
 model Support_User {
-  id           Int     @id @default(autoincrement())
+  id           String  @id @default(uuid())
   first_name   String
   last_name    String?
   email        String  @unique
@@ -83,4 +103,18 @@ model Support_User {
   country      String
   zip_code     String
   phone_number String
+}
+
+enum AUTH_PROVIDER {
+  GOOGLE
+}
+
+model Blog {
+  id        String    @id @default(uuid())
+  title     String
+  content   String
+  published DateTime  @default(now())
+  edited    DateTime?
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  String
 }

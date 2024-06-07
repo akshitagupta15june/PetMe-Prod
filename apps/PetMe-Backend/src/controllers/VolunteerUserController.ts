@@ -4,7 +4,7 @@ import VolunteerUserService from '../services/VolunteersService';
 export default class VolunteerUserController {
   constructor(
     private volunterUserService: VolunteerUserService,
-  ) {}
+  ) { }
 
   public async getVolunteerUserById(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
@@ -24,9 +24,9 @@ export default class VolunteerUserController {
     return res.status(200).json(response);
   }
 
-  public async createVolunteerUser(req: Request, res: Response): Promise<Response> {    
+  public async createVolunteerUser(req: Request, res: Response): Promise<Response> {
     const body = req.body;
-    
+
     const response = await this.volunterUserService.createVolunteerUser(body);
 
     return res.status(response.code).json({ message: response });
