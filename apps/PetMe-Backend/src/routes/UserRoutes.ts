@@ -11,7 +11,7 @@ UserRoutes.post('/signin', (req, res) => {
 })
 
 UserRoutes.put('/profile/:userId', (req, res) => {
-
+    
 })
 
 UserRoutes.get('/profile/:userId', (req, res) => {
