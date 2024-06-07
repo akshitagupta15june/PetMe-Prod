@@ -1,1 +1,0 @@
-import prisma from '../db';

@@ -1,7 +1,7 @@
-import { Router } from 'express';
-import VolunteerUserController from '../controllers/VolunteerUserController';
+// import { Router } from 'express';
+// import VolunteerUserController from '../controllers/VolunteerUserController';
 // import VolunteerUserModel from '../models/VolunteersModel';
-import VolunteerUserService from '../services/VolunteersService';
+// import VolunteerUserService from '../services/VolunteersService';
 
 // const volunteerUserModel = new VolunteerUserModel();
 // const volunteerUserService = new VolunteerUserService(volunteerUserModel);

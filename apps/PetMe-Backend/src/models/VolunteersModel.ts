@@ -1,6 +1,6 @@
-import prisma from '../db';
-import IStatusMap from '../interfaces/StatusMap/StatusMap';
-import { IVolunteerData, IVolunteerUserModel, } from '../interfaces/DonateUser/VolunteerUser';
+// import prisma from '../db';
+// import IStatusMap from '../interfaces/StatusMap/StatusMap';
+// import { IVolunteerData, IVolunteerUserModel, } from '../interfaces/DonateUser/VolunteerUser';
 
 // export default class VolunteerUserModel {
 //   private prisma = prisma;
