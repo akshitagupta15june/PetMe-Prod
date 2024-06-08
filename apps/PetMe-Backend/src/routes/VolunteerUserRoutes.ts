@@ -1,6 +1,6 @@
 // import { Router } from 'express';
 // import VolunteerUserController from '../controllers/VolunteerUserController';
-// // import VolunteerUserModel from '../models/VolunteersModel';
+// import VolunteerUserModel from '../models/VolunteersModel';
 // import VolunteerUserService from '../services/VolunteersService';
 
 // // const volunteerUserModel = new VolunteerUserModel();
