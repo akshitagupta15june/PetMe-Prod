@@ -59,6 +59,7 @@ export default class App {
           let user = await this.prismaInstance.user.findUnique({ where: { email:email } });
           if (!user) {
             user = await this.prismaInstance.user.create({
+              //@ts-ignore  // TODO: fix this 
               data: {
                 google_id:Id,
                 first_name:first_name,
