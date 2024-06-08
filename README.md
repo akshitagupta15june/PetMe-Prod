@@ -1,3 +1,7 @@
+# API Docs For backend and frontend developers to follow (would keep updating it as we change the code)
+
+https://worried-puma-2ec.notion.site/API-Docs-for-Pet-Me-Backend-4ca061475b2a4d5a8526ebf3a23bd98d
+
 # Turborepo starter
 
 This is an official starter Turborepo.
