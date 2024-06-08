@@ -48,4 +48,21 @@ export default class UserController {
       return res.status(500).json({ message: 'Internal Server Error' });
     }
   }
+  public async updateUser(req: Request, res: Response): Promise<Response> {
+    const { id } = req.params;
+    const body = req.body;
+
+    try {
+      const response = await this.userService.updateUser(id, body);
+
+      if (response.status === 'error') {
+        return res.status(response.code).json({ message: response.message });
+      }
+
+      return res.status(response.code).json({ message: response.message });
+    } catch (error) {
+      console.error('Error updating user:', error);
+      return res.status(500).json({ message: 'Internal Server Error' });
+    }
+  }
 }

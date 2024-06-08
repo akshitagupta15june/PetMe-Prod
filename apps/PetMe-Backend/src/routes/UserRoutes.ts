@@ -17,15 +17,21 @@ UserRoutes.post('/signup', (req, res) => {
 })
 
 UserRoutes.post('/signin', (req, res) => {
+    userController.loginUser(req,res);
 
 
 })
 
 UserRoutes.put('/profile/:userId', (req, res) => {
+    const id=req.params.userId;
+    userController.updateUser(req,res)
+
     
 })
 
 UserRoutes.get('/profile/:userId', (req, res) => {
+    const id=req.params.userId;
+    userController.getUserById(req,res)
     
 })
 

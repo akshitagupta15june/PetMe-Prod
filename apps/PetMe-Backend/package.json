@@ -6,7 +6,7 @@
   "node": "v20",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc -b",
+    "build": "tsc",
     "predev": "npx prisma generate && npx prisma migrate dev",
     "dev": "tsnd --watch \"./src/**\" --transpile-only src/server.ts",
     "prestart": "npx prisma generate && npx prisma migrate deploy",

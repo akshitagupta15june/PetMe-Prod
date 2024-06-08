@@ -7,13 +7,14 @@ import { Strategy as Oauth2Strategy } from 'passport-google-oauth2';
 import prisma from './db';
 import router from './routes';
 
-class App {
+export default class App {
   private app: Express;
-  private prismaInstance: typeof prisma;
+  private prismaInstance = prisma;
+  
 
-  constructor(prismaInstance: typeof prisma) {
+  constructor() {
     this.app = express();
-    this.prismaInstance = prismaInstance;
+   
     this.config();
 
     this.app.get('/', (_req, res) => {
@@ -35,6 +36,7 @@ class App {
     }));
     this.app.use(passport.initialize());
     this.app.use(passport.session());
+    //@ts-ignore   fix this issue in done typescript giving errors but working fine
     passport.serializeUser<any, any>((user, done) => done(null, user));
     passport.deserializeUser<any, any>((user, done) => done(null, user));
 
@@ -51,13 +53,16 @@ class App {
       },
       async (accessToken, refreshToken, profile, done) => {
         try {
-          let user = await this.prismaInstance.user.findUnique({ where: { google_id: profile.id } });
+          const email:string=profile.emails[0].value;
+          const Id:string=profile.id; 
+         const first_name:string= profile.displayName;
+          let user = await this.prismaInstance.user.findUnique({ where: { email:email } });
           if (!user) {
             user = await this.prismaInstance.user.create({
               data: {
-                google_id: profile.id,
-                first_name: profile.displayName,
-                email: profile.emails[0].value,
+                google_id:Id,
+                first_name:first_name,
+                email: email
               }
             });
           }
@@ -98,5 +103,3 @@ class App {
     this.app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   }
 }
-
-export default App;

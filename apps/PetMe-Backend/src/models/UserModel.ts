@@ -131,7 +131,20 @@ export default class UserModel {
   public async getUserByEmail(email: string): Promise<IuserData | null> {
     try {
       const user = await this.prisma.user.findUnique({ where: { email } });
-      return user;
+      if (!user) return null;
+      return {
+        id: user.id,
+        first_name: user.first_name,
+        last_name: user.last_name,
+        email: user.email,
+        address: user.address,
+        city: user.city,
+        state: user.state,
+        country: user.country,
+        zip_code: user.zip_code,
+        phone_number: user.phone_number,
+        role: user.role,
+      };
     } catch (error) {
       console.error('Error fetching user by email:', error);
       throw new Error('Error fetching user by email');

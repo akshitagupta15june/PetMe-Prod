@@ -22,7 +22,7 @@ export default class UserService {
     return response;
   }
 
-  async updateVolunteerUser(id: string, userData: IuserData): Promise<IStatusMap> {
+  async updateUser(id: string, userData: IuserData): Promise<IStatusMap> {
     const user = await this.UserModel.getUserById(id);
 
     if (!user) {
