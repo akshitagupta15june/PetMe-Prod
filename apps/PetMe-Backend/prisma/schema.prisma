@@ -7,23 +7,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model User  {
   id            String         @id @default(uuid())
   first_name    String
   last_name     String?
   email         String         @unique
-  password      String
-  address       String
+  password      String?
+  address       String          @default("")
   google_id     String?
-  city          String
+  city          String          @default("")
   auth_provider AUTH_PROVIDER?
-  state         String
-  country       String
-  zip_code      String
-  phone_number  String
-  role          String[]
+  state         String          @default("")
+  country       String          @default("")
+  zip_code      String          @default("")
+  phone_number  String           @default("")
+  role          String[]          
   Donate_Pets   Donate_Pets[]
-  verfied_flag  Boolean
+  verfied_flag  Boolean         @default(false)
   Blog          Blog[]
 }
 

@@ -1,0 +1,8 @@
+-- AlterTable
+ALTER TABLE "User" ALTER COLUMN "address" SET DEFAULT '',
+ALTER COLUMN "city" SET DEFAULT '',
+ALTER COLUMN "state" SET DEFAULT '',
+ALTER COLUMN "country" SET DEFAULT '',
+ALTER COLUMN "zip_code" SET DEFAULT '',
+ALTER COLUMN "phone_number" SET DEFAULT '',
+ALTER COLUMN "verfied_flag" SET DEFAULT false;
