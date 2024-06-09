@@ -3,7 +3,8 @@ import prisma from "../db" // Ensure prisma is correctly imported and initialize
 import PetServices from "../services/PetServices"
 
 export default class PetController {
-  constructor(private userService: PetServices) {}
+  // PetServices: any
+  constructor(private petService: PetServices) { }
 
   public async fetchPets(req: Request, res: Response): Promise<void> {
     try {
@@ -52,6 +53,29 @@ export default class PetController {
       const errorMessage =
         error instanceof Error ? error.message : "An unknown error occurred"
       res.status(500).json({ error: errorMessage })
+    }
+  }
+
+  public async createSosPets(req: Request, res: Response): Promise<Response> {
+    try {
+      const body = req.body
+      const response = await this.petService.sosPetsService(body)
+      if (!response) {
+        return res.status(500).json({
+          message: "Blog not created",
+        })
+      }
+
+      return res.status(200).json({
+        msg: "success",
+        response,
+      })
+    } catch (error) {
+      return res.status(500).json({
+        message: "Error while creating blog",
+        error,
+      })
+
     }
   }
 }

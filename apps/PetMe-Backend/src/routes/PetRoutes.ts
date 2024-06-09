@@ -13,7 +13,9 @@ const petController = new PetController(petServices)
 
 PetRoutes.post("/donate", (req, res) => {})
 
-PetRoutes.post("/SOS", async (req, res) => {})
+PetRoutes.post("/SOS", async (req, res) => {
+  petController.createSosPets(req, res);
+})
 
 PetRoutes.get("/bulk", (req, res) => {
   petController.fetchPets(req, res)

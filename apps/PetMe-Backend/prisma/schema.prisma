@@ -23,6 +23,7 @@ model User  {
   phone_number  String           @default("")
   role          String[]          
   Donate_Pets   Donate_Pets[]
+  SOS_Pets      SOS_Pets[]
   verfied_flag  Boolean         @default(false)
   Blog          Blog[]
 }
@@ -78,6 +79,7 @@ model Pet_Type {
   id   String @id @default(uuid())
   name String
   Pets Pets[]
+  SOS_Pets SOS_Pets[]
 }
 
 model Pet_Breed {
@@ -118,3 +120,17 @@ model Blog {
   author    User      @relation(fields: [authorId], references: [id])
   authorId  String
 }
+
+model SOS_Pets {
+  id              String    @id @default(uuid())
+  user            User      @relation(fields: [report_user_id], references: [id])
+  report_user_id  String
+  landmark        String
+  type_id         String
+  Pet_Type        Pet_Type  @relation(fields: [type_id], references: [id])
+  Pet_Condition   String
+  Additional_Desc String
+// Live_location   Object 
+}
+
+

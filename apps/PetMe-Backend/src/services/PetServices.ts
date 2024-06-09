@@ -1,5 +1,8 @@
 import PetModel from "../models/PetModels"
 import Pets from "../interfaces/Pet/Pets"
+import SosPets from "../interfaces/Pet/SosPets"
+import IStatusMap from "../interfaces/StatusMap/StatusMap"
+
 
 export default class PetServices {
   constructor(private petModel: PetModel) {}
@@ -23,4 +26,10 @@ export default class PetServices {
       return null
     }
   }
+
+  async sosPetsService(sosData: SosPets): Promise<IStatusMap> {
+    const res = await this.petModel.sosPetsModel(sosData)
+    return res;
+  }
+
 }
