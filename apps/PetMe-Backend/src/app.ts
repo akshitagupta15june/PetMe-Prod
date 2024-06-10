@@ -37,8 +37,8 @@ export default class App {
     this.app.use(passport.initialize())
     this.app.use(passport.session())
     //@ts-ignore fix this issue in done typescript giving errors but working fine
-    passport.serializeUser<any, any>((user, done) => done(null, user))
-    passport.deserializeUser<any, any>((user, done) => done(null, user))
+    passport.serializeUser<any, any>((user: Express.User, done: (err: any, id?: any) => void) => done(null, user))
+    passport.deserializeUser<any, any>((user: Express.User, done: (err: any, id?: any) => void) => done(null, user))
 
     this.setupGoogleAuthStrategy()
   }
