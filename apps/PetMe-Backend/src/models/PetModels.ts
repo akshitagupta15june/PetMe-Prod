@@ -2,6 +2,7 @@ import { SOS_Pets } from "@prisma/client"
 import prisma from "../db"
 import SosPets from "../interfaces/Pet/SosPets"
 import IStatusMap from "../interfaces/StatusMap/StatusMap"
+import DonatePets from "../interfaces/Pet/DonatePet"
 
 export default class PetModel {
   private prisma = prisma
@@ -30,6 +31,24 @@ export default class PetModel {
     return {
       status: "success",
       message: "Reported successfully",
+      code: 200,
+    }
+  }
+
+  async donatePetsModel(donatePetsData: DonatePets): Promise<IStatusMap> {
+    await this.prisma.pets.create({
+      data: {
+        // pet_type: donatePetsData.petType,
+        pet_img: donatePetsData.petImg,
+        name: donatePetsData.petName,
+        type_id: donatePetsData.typeId,
+        breed_id: donatePetsData.breedId,
+        color_id: donatePetsData.colorId
+      },
+    })
+    return {
+      status: "success",
+      message: "Donated successfully",
       code: 200,
     }
   }
