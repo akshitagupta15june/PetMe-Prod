@@ -16,19 +16,19 @@ export function BlogTemplate() {
         <h2 className="text-xl font-bold text-center md:text-3xl">A Blog For Pet Lovers And Their Pet Stories</h2>
       </div>
 
-      <div className="grid grid-cols-1 mx-auto mt-5 mb-10 gap-4 md:grid-cols-2 md:w-[700px] md:mt-0 xl:grid-cols-3 xl:w-[1120px]">
+      <div className="grid grid-cols-1 mx-auto mt-5 mb-10 gap-4 sm:gap-10 md:grid-cols-2 md:w-[700px] md:mt-0 xl:grid-cols-3 xl:w-[1120px]">
         {posts.map((post) => (
-          <div key={post.id} className="grid gap-4 justify-items-center mx-20 md:mx-0">
+          <div key={post.id} className="grid gap-4 justify-items-center mx-10 sm:mx-20 md:mx-0 shadow-2xl p-6 rounded-lg">
             <img
               src={post.poster}
               alt="blog-poster"
-              className="w-[15rem] h-[12rem] rounded-lg md:w-full"
+              className="w-[15rem] h-[12rem] rounded-lg w-full"
             />
-            <h2>{post.title}</h2>
-            <p className="text-center">{post.description}</p>
+            <h2 className="text-md sm:text-xl font-bold text-center">{post.title}</h2>
+            <p className="text-justify text-sm sm:text-md ">{post.description}</p>
             <a
               href={post.read}
-              className="text-center text-blue-500 hover:text-blue-700"
+              className="text-center text-amber-700 hover:text-amber-900 font-bold"
             >
               Read more
             </a>
