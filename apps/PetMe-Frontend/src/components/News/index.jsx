@@ -5,19 +5,19 @@ import { newsForPage } from '../../helpers/newsForPage';
 import moment from 'moment';
 export default function NewsTemplate() {
   return (
-    <section className="w-[20rem] mx-auto grid grid-cols-1 gap-10 mt-14 mb-10 md:grid-cols-2 md:w-[700px] md:mx-auto xl:w-[1120px] xl:grid-cols-3">
-      {newsForPage.map((news) => (
-        <div key={news.id} className="flex flex-col items-center gap-4 border-slate-600">
-          <h1 className="text-md font-bold text-center">{news.title}</h1>
-          <img
-            src={news.image}
-            alt=""
-            className="w-[12rem] h-[12rem] rounded-xl object-cover"
-          />
-          <p className="text-sm text-center">{news.description}</p>
-          <p className="text-sm text-center">{moment(news?.date).format('Do MMM, YYYY')}</p>
-        </div>
-      ))}
-    </section>
+    <div class="container px-5 py-24 mx-auto max-w-7x1">
+      <div class="flex flex-wrap -m-4">
+        {newsForPage.map((news) => (
+          <div key={news.id} class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="bg-white p-6 rounded-lg">
+              <img class="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src={news.image} />
+              <h3 class="tracking-widest text-amber-700 text-xs font-bold title-font"> {moment(news?.date).format('Do MMM, YYYY')} </h3>
+              <h2 class="text-lg text-gray-900 font-medium title-font mb-4"> {news.title} </h2>
+              <p class="leading-relaxed text-sm">{news.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
