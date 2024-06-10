@@ -2,6 +2,7 @@ import PetModel from "../models/PetModels"
 import Pets from "../interfaces/Pet/Pets"
 import SosPets from "../interfaces/Pet/SosPets"
 import IStatusMap from "../interfaces/StatusMap/StatusMap"
+import DonatePets from "../interfaces/Pet/DonatePet"
 
 
 export default class PetServices {
@@ -32,4 +33,8 @@ export default class PetServices {
     return res;
   }
 
+  async donatePetsService(donateData: DonatePets): Promise<IStatusMap> {
+    const res = await this.petModel.donatePetsModel(donateData);
+    return res
+  }
 }

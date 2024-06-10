@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import prisma from "../db" // Ensure prisma is correctly imported and initialized
 import PetServices from "../services/PetServices"
+import IStatusMap from "../interfaces/StatusMap/StatusMap"
 
 export default class PetController {
   // PetServices: any
@@ -62,7 +63,7 @@ export default class PetController {
       const response = await this.petService.sosPetsService(body)
       if (!response) {
         return res.status(500).json({
-          message: "Blog not created",
+          message: "SOS not created",
         })
       }
 
@@ -72,10 +73,31 @@ export default class PetController {
       })
     } catch (error) {
       return res.status(500).json({
-        message: "Error while creating blog",
+        message: "Error while reporting",
         error,
       })
+    }
+  }
 
+  public async createDonationForPets(req: Request, res: Response): Promise<Response> {
+    try {
+       const body = req.body
+       const response = await this.petService.donatePetsService(body);
+       if (!response) {
+        return res.status(500).json({
+          message: "Donation failed",
+        })
+      }
+
+      return res.status(200).json({
+        msg: "success",
+        response,
+      })
+    } catch (error) {
+      return res.status(500).json({
+        message: "Error while donating",
+        error,
+      })
     }
   }
 }
