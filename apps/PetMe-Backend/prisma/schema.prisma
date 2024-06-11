@@ -67,6 +67,7 @@ model Pets {
   id          String        @id @default(uuid())
   name        String
   color_id    String
+  pet_img     String 
   breed_id    String
   type_id     String
   Donate_Pets Donate_Pets[]

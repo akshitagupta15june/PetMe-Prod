@@ -11,7 +11,9 @@ const petModel = new PetModel()
 const petServices = new PetServices(petModel)
 const petController = new PetController(petServices)
 
-PetRoutes.post("/donate", (req, res) => {})
+PetRoutes.post("/donate", (req, res) => {
+  petController.createDonationForPets(req, res);
+})
 
 PetRoutes.post("/SOS", async (req, res) => {
   petController.createSosPets(req, res);
