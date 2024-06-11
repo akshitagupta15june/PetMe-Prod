@@ -7,12 +7,12 @@ function Pets() {
   return (
     <>
       <Header />
-      <div className="w-full " >
+      <div className="w-full">
         <div className="w-[80vw] mx-auto my-10">
           {/* title */}
           <div className="text-center text-4xl font-bold mb-10">Ready to meet your friend ?</div>
           {/*Gallery*/}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 space-y-6 sm:space-y-0 sm:gap-8">
             {/* Card */}
             <Card id="1" title="Rosi" location="Valenia, Spain" age="10" gender="m" image="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             <Card id="2" title="Gullu" location="Pune, India" age="4" gender="f" image="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />

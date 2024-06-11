@@ -1,7 +1,7 @@
 import React from 'react';
 export default function Card(props) {
   return (
-    <div className="rounded-xl p-6 h-fit space-y-3 border-2 border-white hover:border-amber-400 hover:cursor-pointer">
+    <div className="rounded-xl p-3 sm:p-6 h-fit space-y-3 border-2 border-white hover:border-amber-400 hover:cursor-pointer">
       {/*Cover Image*/}
       <img className="w-full h-[25vh] object-cover rounded-lg" src={props.image} alt="" />
       {/*title*/}
