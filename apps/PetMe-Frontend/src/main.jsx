@@ -13,6 +13,7 @@ import Blog from './pages/Blog';
 import SupportUs from './pages/SupportUs';
 import Report from './pages/Report';
 import ContactUs from './pages/ContactUs';
+import Pets from './pages/Pets';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <ContactUs />,
+  },
+  {
+    path: '/pets',
+    element: <Pets />,
   },
 ]);
 
