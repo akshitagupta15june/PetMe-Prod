@@ -3,6 +3,7 @@ import prisma from "../db"
 import SosPets from "../interfaces/Pet/SosPets"
 import IStatusMap from "../interfaces/StatusMap/StatusMap"
 import DonatePets from "../interfaces/Pet/DonatePet"
+import { Pets } from '@prisma/client';
 
 export default class PetModel {
   private prisma = prisma
@@ -14,9 +15,64 @@ export default class PetModel {
     })
   }
 
-  async fetchPets() {
-    return await prisma.pets.findMany()
+  async fetchPets(filters: any = {}): Promise<Pets[]> {
+    const { type, breed, age, size, gender, location, adoptionFee } = filters
+  
+    const whereConditions: any[] = []
+  
+    if (type) {
+      whereConditions.push({
+        type_id: type,
+      })
+    }
+  
+    if (breed) {
+      whereConditions.push({
+        breed_id: breed,
+      })
+    }
+  
+    if (age) {
+      whereConditions.push({
+        age: age,
+      })
+    }
+  
+    if (size) {
+      whereConditions.push({
+        size: size,
+      })
+    }
+  
+    if (gender) {
+      whereConditions.push({
+        gender: gender,
+      })
+    }
+  
+    if (location) {
+      whereConditions.push({
+        location: location,
+      })
+    }
+  
+    if (adoptionFee) {
+      whereConditions.push({
+        adoption_fee: adoptionFee,
+      })
+    }
+  
+    if (whereConditions.length === 0) {
+      return await prisma.pets.findMany() // Return all pets if no filters are provided
+    }
+  
+    return await prisma.pets.findMany({
+      where: {
+        AND: whereConditions,
+      },
+    })
   }
+  
 
   async sosPetsModel(sosPetsData: SosPets): Promise<IStatusMap> {
     await this.prisma.sOS_Pets.create({

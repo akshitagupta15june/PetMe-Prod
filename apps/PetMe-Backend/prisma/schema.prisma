@@ -64,17 +64,23 @@ model Donate_Pets {
 }
 
 model Pets {
-  id          String        @id @default(uuid())
-  name        String
-  color_id    String
-  pet_img     String 
-  breed_id    String
-  type_id     String
-  Donate_Pets Donate_Pets[]
-  pet_breed   Pet_Breed     @relation(fields: [breed_id], references: [id])
-  pet_color   Pet_Color     @relation(fields: [color_id], references: [id])
-  pet_type    Pet_Type      @relation(fields: [type_id], references: [id])
+  id           String        @id @default(uuid())
+  name         String
+  color_id     String
+  pet_img      String
+  breed_id     String
+  type_id      String
+  gender       String        // New field for gender
+  age          String        // New field for age
+  size         String        // New field for size
+  location     String        // New field for location
+  adoption_fee String        // New field for adoption fee
+  Donate_Pets  Donate_Pets[]
+  pet_breed    Pet_Breed     @relation(fields: [breed_id], references: [id])
+  pet_color    Pet_Color     @relation(fields: [color_id], references: [id])
+  pet_type     Pet_Type      @relation(fields: [type_id], references: [id])
 }
+
 
 model Pet_Type {
   id   String @id @default(uuid())
