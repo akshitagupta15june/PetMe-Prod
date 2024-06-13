@@ -4,6 +4,7 @@ import bodyParser from "body-parser"
 import session from "express-session"
 import passport from "passport"
 import { Strategy as Oauth2Strategy } from "passport-google-oauth2"
+import { User as PassportUser } from 'passport';
 import prisma from "./db"
 import router from "./routes"
 
@@ -37,8 +38,13 @@ export default class App {
     this.app.use(passport.initialize())
     this.app.use(passport.session())
     //@ts-ignore fix this issue in done typescript giving errors but working fine
-    passport.serializeUser<any, any>((user, done) => done(null, user))
-    passport.deserializeUser<any, any>((user, done) => done(null, user))
+  passport.serializeUser((user: PassportUser, done: (err: any, id?: any) => void) => {
+      done(null, user);
+    });
+
+    passport.deserializeUser((id: any, done: (err: any, user?: any) => void) => {
+      done(null, id);
+    });
 
     this.setupGoogleAuthStrategy()
   }
