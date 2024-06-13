@@ -37,7 +37,8 @@ export default class App {
     )
     this.app.use(passport.initialize())
     this.app.use(passport.session())
-    //@ts-ignore fix this issue in done typescript giving errors but working fine
+    
+    // Define the types explicitly for serializeUser and deserializeUser methods so that TypeScript can understand the expected types and should not throw type errors for the done function.
   passport.serializeUser((user: PassportUser, done: (err: any, id?: any) => void) => {
       done(null, user);
     });
