@@ -10,8 +10,6 @@ import router from "./routes";
 
 interface User {
   id: string;
-  first_name: string;
-  email: string;
 }
 
 type UserID = User['id'];
