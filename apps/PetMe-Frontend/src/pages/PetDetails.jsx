@@ -30,7 +30,7 @@ function PetDetails() {
                   <p className="content text-base sm:w-3/4 sm:p-6 text-justify">
                     Overall, cats are delightful companions whose cute appearance and charming behaviors make them cherished pets for many people around the world.
                   </p>
-                  <div className="sm:pl-6 mt-3 flex flex-col sm:justify-between sm:w-1/2 space-y-3">
+                  <div className="sm:pl-6 my-3 flex flex-col sm:justify-between sm:w-1/2 space-y-3">
                     <div className="flex items-center space-x-2">
                       <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 text-gray-400" viewBox="0 0 20 20"><path fill="currentColor" d="M10 2C6.69 2 4 4.69 4 8c0 2.02 1.17 3.71 2.53 4.89c.43.37 1.18.96 1.85 1.83c.74.97 1.41 2.01 1.62 2.71c.21-.7.88-1.74 1.62-2.71c.67-.87 1.42-1.46 1.85-1.83C14.83 11.71 16 10.02 16 8c0-3.31-2.69-6-6-6m0 2.56a3.44 3.44 0 1 1 0 6.88a3.44 3.44 0 0 1 0-6.88" /></svg>
                       <span className="text-sm font-bold text-gray-600">Rosalia, Spain</span>
@@ -44,6 +44,7 @@ function PetDetails() {
                       <span className="text-sm font-bold text-gray-700">Male</span>
                     </div>
                   </div>
+                  <button className="w-full sm:w-fit sm:ml-6 mt-5 text-gray-800 font-bold px-5 py-3 border-4 hover:bg-gray-800 hover:border-white hover:text-white border-gray-800 rounded-xl">Adopt Me !</button>
                 </div>
             
             </div>
