@@ -26,17 +26,17 @@ function MenuItem() {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="w-[100vw] h-[100vh] top-0 right-0 p-4 text-center flex flex-col gap-5 justify-center items-center bg-orange-900 text-white"
+      className="w-[100vw] h-[100vh] top-0 right-0 p-4 text-center flex flex-col gap-5 justify-center items-center bg-white text-black"
     >
       { buttons.map((button) => (
         <motion.li
           key={button.id}
-          className="p-2 hover:text-orange-300 hover:underline"
+          className="p-2 hover:font-semibold"
         >
           <Link
             key={button.id}
             to={button.link}
-            className="text-white text-2xl font-bold"
+            className="text-black text-2xl font-bold"
           >
             {button.name}
           </Link>
