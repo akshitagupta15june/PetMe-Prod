@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import OurService from '../components/OurService';
+import Love from '../components/Love';
 import AnimalsCard from '../components/AnimalsCard';
 import Contributors from '../components/Contributors';
 import Footer from '../components/Footer';
@@ -16,6 +17,7 @@ function App() {
         <Hero />
         <About />
         <OurService />
+        <Love />
         <AnimalsCard />
         <Contributors />
       </main>

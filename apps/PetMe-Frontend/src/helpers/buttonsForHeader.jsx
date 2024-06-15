@@ -15,6 +15,11 @@ const buttons = [
     link: '/petnews',
   },
   {
+    id: 9,
+    name: 'Pets',
+    link: '/pets',
+  },
+  {
     id: 5,
     name: 'Blogs',
     link: '/blogs',

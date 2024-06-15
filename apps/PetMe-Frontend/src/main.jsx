@@ -13,6 +13,8 @@ import Blog from './pages/Blog';
 import SupportUs from './pages/SupportUs';
 import Report from './pages/Report';
 import ContactUs from './pages/ContactUs';
+import Pets from './pages/Pets';
+import PetDetails from './pages/PetDetails';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,13 @@ const router = createBrowserRouter([
     path: '/contact',
     element: <ContactUs />,
   },
+  {
+    path: '/pets',
+    element: <Pets />,
+  },{
+    path: '/petdetails',
+    element: <PetDetails />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
