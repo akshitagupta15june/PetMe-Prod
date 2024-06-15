@@ -37,26 +37,22 @@ function Header() {
     <>
       <motion.header
         id="header"
-        className="text-white bg-orange-900 flex items-center justify-around"
+        className="text-black bg-white flex items-center justify-between"
       >
-        <div className="flex items-center md:items-center p-5" id="logo">
-          <span className="p-2 xl:text-xl text-sm"> Saving Lives </span>
-          <a
-            href="/"
-          >
-            <img className="rounded-full w-20" src={logo} alt="logo" />
+        <div className="flex items-center md:items-center p-5 ml-10" id="logo">
+          <a href="/">
+            <img className=" w-14" src={logo} alt="logo" />
           </a>
-          <span className="p-2 xl:text-xl text-sm"> Saving Animals </span>
         </div>
 
-        <nav className="flex items-center justify-center">
+        <nav className="flex items-center gap-3 justify-center">
           { buttons.map((button) => (
             <a
               key={button.id}
               id={button.id}
               href={button.link === '' ? undefined : button.link}
-              onClick={button.name !== 'About' ? (() => {}) : scrollDown}
-              className="items p-2 cursor-pointer hover:text-orange-300 hover:underline lg:text-[0.8rem] xl:text-[1rem]"
+              // onClick={button.name !== 'About' ? (() => {}) : scrollDown}
+              className="items tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem]"
             >
               {button.name}
             </a>
@@ -64,10 +60,9 @@ function Header() {
 
           <button
             type="button"
-            className="bg-[#C57837] p-4 focus:outline-none font-bold rounded mt-4 md:mt-0 lg:text-[0.9rem] xl:text-[1rem]"
-            onClick={() => setIsModalOpen(!isModalOpen)}
-          >
-            Contact Us
+            className="items tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem] mr-12"
+            onClick={() => setIsModalOpen(!isModalOpen)}>
+            CONTACT US
           </button>
         </nav>
 

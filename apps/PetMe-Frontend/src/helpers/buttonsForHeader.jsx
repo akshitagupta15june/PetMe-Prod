@@ -1,17 +1,17 @@
 const buttons = [
   {
     id: 1,
-    name: 'Home',
+    name: 'HOME',
     link: '/',
   },
-  {
-    id: 2,
-    name: 'About',
-    link: '',
-  },
+  // {
+  //   id: 2,
+  //   name: 'About',
+  //   link: '',
+  // },
   {
     id: 4,
-    name: 'PetNews',
+    name: 'NEWS',
     link: '/petnews',
   },
   {
@@ -21,22 +21,22 @@ const buttons = [
   },
   {
     id: 5,
-    name: 'Blogs',
+    name: 'BLOGS',
     link: '/blogs',
   },
   {
     id: 6,
-    name: 'Donate Animals',
+    name: 'DONATE ANIMALS',
     link: '/donateanimals',
   },
-  {
-    id: 7,
-    name: 'Support Us',
-    link: '/donate',
-  },
+  // {
+  //   id: 7,
+  //   name: 'Support Us',
+  //   link: '/donate',
+  // },
   {
     id: 8,
-    name: 'SOS Report',
+    name: 'SOS REPORT',
     link: '/report',
   },
 ];

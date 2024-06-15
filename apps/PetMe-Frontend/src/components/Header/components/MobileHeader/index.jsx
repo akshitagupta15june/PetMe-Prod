@@ -16,13 +16,10 @@ function MobileMenu(props) {
   return (
     <header
       id="header"
-      className="text-white bg-orange-900 flex items-center justify-around"
-    >
-      <div className="flex items-center md:items-center p-5" id="logo">
-        <a
-          href="/"
-        >
-          <img className="rounded-full w-20" src={logo} alt="logo" />
+      className="text-black bg-white flex items-center justify-between">
+      <div className="flex items-center md:items-center p-5 ml-14" id="logo">
+        <a href="/">
+          <img className="w-20" src={logo} alt="logo" />
         </a>
       </div>
 

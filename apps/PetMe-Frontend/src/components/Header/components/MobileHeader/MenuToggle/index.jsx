@@ -14,7 +14,7 @@ function MenuToggle(props) {
       <svg
         className="w-10 h-10"
         aria-hidden="true"
-        fill="currentColor"
+        fill="#000000"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
       >
