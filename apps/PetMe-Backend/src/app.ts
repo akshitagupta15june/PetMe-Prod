@@ -40,44 +40,44 @@ export default class App {
     passport.serializeUser<any, any>((user, done) => done(null, user))
     passport.deserializeUser<any, any>((user, done) => done(null, user))
 
-    this.setupGoogleAuthStrategy()
+    // this.setupGoogleAuthStrategy()
   }
 
-  private setupGoogleAuthStrategy(): void {
-    passport.use(
-      new Oauth2Strategy(
-        {
-          clientID: process.env.CLIENT_ID || "",
-          clientSecret: process.env.CLIENT_SECRET || "",
-          callbackURL: "/auth/google/callback",
-          scope: ["email", "profile"],
-        },
-        async (accessToken, refreshToken, profile, done) => {
-          try {
-            const email: string = profile.emails[0].value
-            const Id: string = profile.id
-            const first_name: string = profile.displayName
-            let user = await this.prismaInstance.user.findUnique({
-              where: { email: email },
-            })
-            if (!user) {
-              user = await this.prismaInstance.user.create({
-                //@ts-ignore  // TODO: fix this
-                data: {
-                  google_id: Id,
-                  first_name: first_name,
-                  email: email,
-                },
-              })
-            }
-            return done(null, user)
-          } catch (error) {
-            return done(error, null)
-          }
-        },
-      ),
-    )
-  }
+  // private setupGoogleAuthStrategy(): void {
+  //   passport.use(
+  //     new Oauth2Strategy(
+  //       {
+  //         clientID: process.env.CLIENT_ID || "",
+  //         clientSecret: process.env.CLIENT_SECRET || "",
+  //         callbackURL: "/auth/google/callback",
+  //         scope: ["email", "profile"],
+  //       },
+  //       async (accessToken, refreshToken, profile, done) => {
+  //         try {
+  //           const email: string = profile.emails[0].value
+  //           const Id: string = profile.id
+  //           const first_name: string = profile.displayName
+  //           let user = await this.prismaInstance.user.findUnique({
+  //             where: { email: email },
+  //           })
+  //           if (!user) {
+  //             user = await this.prismaInstance.user.create({
+  //               //@ts-ignore  // TODO: fix this
+  //               data: {
+  //                 google_id: Id,
+  //                 first_name: first_name,
+  //                 email: email,
+  //               },
+  //             })
+  //           }
+  //           return done(null, user)
+  //         } catch (error) {
+  //           return done(error, null)
+  //         }
+  //       },
+  //     ),
+  //   )
+  // }
 
   private routes(): void {
     this.app.use(router)
