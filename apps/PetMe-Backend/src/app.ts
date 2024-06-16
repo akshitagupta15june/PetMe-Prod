@@ -10,6 +10,7 @@ import router from "./routes";
 
 interface User {
   id: string;
+  
 }
 
 type UserID = User['id'];
@@ -53,7 +54,7 @@ export default class App {
       try {
         const user = await this.prismaInstance.user.findUnique({ where: { id } });
         if (user) {
-          done(null, user);
+          done(null, { id: user.id });
         } else {
           done(new Error('User not found'), null);
         }
