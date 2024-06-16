@@ -10,7 +10,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/node.js-%23E34F26.svg?style=for-the-badge&logo=Node.js&logoColor=white"> 
     <img src="https://img.shields.io/badge/react.js-%231572B6.svg?style=for-the-badge&logo=react.js3&logoColor=white">
-    <img src="https://img.shields.io/badge/typescript-%23323330.svg?style=for-the-badge&logo=typescript&logoColor=%23F7DF1E">
     <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
 </p>
 
@@ -264,11 +263,8 @@ Learn more about the power of Turborepo:
 
 <table>
   <tr>
-<td align="center"><a href="https://github.com/Susmita-Dey"><img src="https://avatars.githubusercontent.com/u/79099734?v=4" width="100px;" alt=""/><br /><sub><b>Susmita Dey</b></sub></a></td>
-
 <td align="center"><a href="https://github.com/akshitagupta15june"><img src="https://avatars0.githubusercontent.com/u/57909583?v=4" width="100px;" alt=""/><br /><sub><b>Akshita Gupta</b></sub></a></td>
  
-<td align="center"><a href="https://github.com/muditchoudhary"><img src="https://avatars.githubusercontent.com/u/74391865?s=400&u=2944cf6cb540e3ba3a08653225406d0826e1c272&v=4" width="100px;" alt=""/><br /><sub><b>Mudit Choudhary</b></sub></a></td>
   
  </tr>
 </table>
