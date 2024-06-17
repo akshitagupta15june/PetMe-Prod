@@ -77,6 +77,7 @@ https://worried-puma-2ec.notion.site/API-Docs-for-Pet-Me-Backend-4ca061475b2a4d5
   <tr>
 <td align="center"><a href="https://github.com/akshitagupta15june"><img src="https://avatars0.githubusercontent.com/u/57909583?v=4" width="100px;" alt=""/><br /><sub><b>Akshita Gupta</b></sub></a></td>
 <td align="center"><a href="https://github.com/cb7chaitanya"><img src="https://avatars.githubusercontent.com/u/114876060?v=4" width="100px;" alt=""/><br /><sub><b>Chaitanya</b></sub></a></td>
+<td align="center"><a href="https://github.com/pratham-srivastava-07"><img src="https://avatars.githubusercontent.com/u/117106015?v=4" width="100px;" alt=""/><br /><sub><b>Chaitanya</b></sub></a></td>
  
   
  </tr>
