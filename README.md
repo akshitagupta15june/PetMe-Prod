@@ -6,12 +6,6 @@
     <img src="https://img.shields.io/github/stars/akshitagupta15june/PetMe-Prod">
     <img src="https://img.shields.io/github/license/akshitagupta15june/PetMe-Prod">
 </p>
-<p align="center">Tech Stack:</p>
-<p align="center">
-    <img src="https://img.shields.io/badge/node.js-%23E34F26.svg?style=for-the-badge&logo=Node.js&logoColor=white"> 
-    <img src="https://img.shields.io/badge/react.js-%231572B6.svg?style=for-the-badge&logo=react.js3&logoColor=white">
-    <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
-</p>
 
 <br>
 <h1 align="center">PetMe-Prod</h1>
