@@ -6,6 +6,9 @@ import passport from "passport"
 import { Strategy as Oauth2Strategy } from "passport-google-oauth2"
 import prisma from "./db"
 import router from "./routes"
+import UserController from "./controllers/UserControllers"
+import UserService from "./services/UserService"
+import UserModel from "./models/UserModel"
 
 export default class App {
   private app: Express
@@ -86,7 +89,15 @@ export default class App {
       "/auth/google",
       passport.authenticate("google", { scope: ["email", "profile"] }),
     )
-
+    
+    console.log("started",UserController)
+    const userModel = new UserModel();
+    const userService = new UserService(userModel);
+    const userController = new UserController(userService);
+    // Registering the route handler for POST /auth/signup
+    this.app.post("/auth/signup", userController.createUser.bind(userController));
+    this.app.post("/auth/login", userController.loginUser.bind(userController));
+    this.app.post("/auth/otp", userController.sendOtp.bind(userController));
     this.app.get(
       "/auth/google/callback",
       passport.authenticate("google", { failureRedirect: "/login" }),
