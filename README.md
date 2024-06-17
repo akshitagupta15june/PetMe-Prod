@@ -10,9 +10,6 @@
 <br>
 <h1 align="center">PetMe-Prod</h1>
 <h3 align="center">"Bringing Hearts and Paws Together"</h3>
-<p align="center">
-  <img src="/docs/logo.jpg" height="250px">
-  </p>
 
 <p align="center"> Don't forget to join our official <a href="https://discord.gg/QapWBRZbVe">Discord Channel</a> for discussions and updates. </p>
 
