@@ -7,6 +7,14 @@ import { Strategy as Oauth2Strategy } from "passport-google-oauth2"
 import prisma from "./db"
 import router from "./routes"
 
+
+interface User {
+  id: string;
+ 
+}
+
+type UserID = User['id'];
+
 export default class App {
   private app: Express
   private prismaInstance = prisma
@@ -36,9 +44,19 @@ export default class App {
     )
     this.app.use(passport.initialize())
     this.app.use(passport.session())
-    //@ts-ignore fix this issue in done typescript giving errors but working fine
-    passport.serializeUser<any, any>((user, done) => done(null, user))
-    passport.deserializeUser<any, any>((user, done) => done(null, user))
+    passport.serializeUser<User, UserID>((user: User, done: (err: Error | null, id?: UserID) => void) => {
+      done(null, user.id);
+    });
+
+    passport.deserializeUser<UserID, User>(async (id: UserID, done: (err: Error | null, user?: User | null) => void) => {
+      try {
+        const user = await this.prismaInstance.user.findUnique({ where: { id } });
+        done(null, user.id); 
+      } catch (error) {
+        done(error as Error, null);
+      }
+    });
+
 
     // this.setupGoogleAuthStrategy()
   }
