@@ -54,7 +54,7 @@ export default class App {
       try {
         const user = await this.prismaInstance.user.findUnique({ where: { id } });
         if (user) {
-          done(null, { id: user.id });
+          done(null, user.id);
         } else {
           done(new Error('User not found'), null);
         }
