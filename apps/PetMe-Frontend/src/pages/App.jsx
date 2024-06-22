@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-import Hero from '../components/Hero';
+import Hero from '../components/Hero/Sample';
 import About from '../components/About';
 import OurService from '../components/OurService';
 import Love from '../components/Love';
