@@ -4,11 +4,11 @@ const buttons = [
     name: 'HOME',
     link: '/',
   },
-  // {
-  //   id: 2,
-  //   name: 'About',
-  //   link: '',
-  // },
+  {
+    id: 2,
+    name: 'About',
+    link: '/about',
+  },
   {
     id: 4,
     name: 'NEWS',
