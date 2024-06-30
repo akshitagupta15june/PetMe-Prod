@@ -13,6 +13,7 @@ import Blog from './pages/Blog';
 import SupportUs from './pages/SupportUs';
 import Report from './pages/Report';
 import ContactUs from './pages/ContactUs';
+import About from './pages/About';
 import Pets from './pages/Pets';
 import PetDetails from './pages/PetDetails';
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+  },
+  {
+    path: '/about',
+    element: <About />,
   },
   {
     path: '/donateanimals',
