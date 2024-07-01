@@ -5,6 +5,7 @@ export default class BlogController {
   constructor(private blogService: BlogService) {}
 
   public async getBlogs(req: Request, res: Response): Promise<Response> {
+    
     try {
       const response = await this.blogService.getAllBlogs()
 

@@ -1,3 +1,9 @@
 {
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./node_modules/.prisma/client"],
+    "types": ["@types/node", "@types/express", ".prisma/client"]
+  },
+  "include": ["src/**/*.ts", "node_modules/.prisma/client/**/*.ts"],
   "extends": "@repo/typescript-config/base.json"
 }
+

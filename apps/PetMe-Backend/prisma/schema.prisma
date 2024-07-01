@@ -140,4 +140,12 @@ model SOS_Pets {
 // Live_location   Object 
 }
 
-
+model News {
+  id        String    @id @default(uuid())
+  user      String
+  imageSrc  String
+  tags      String[]
+  title     String
+  content   String
+  publishedAt DateTime  @default(now())
+}
