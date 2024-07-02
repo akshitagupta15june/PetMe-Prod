@@ -27,7 +27,8 @@ export default class NewsModel {
                 title: newsData.title,
                 content: newsData.content,
                 tags: newsData.tags,
-                imageSrc: newsData.imageSrc
+                imageSrc: newsData.imageSrc,
+                publishedAt: newsData.publishedAt || new Date().toISOString()
             }
         })
         return {
