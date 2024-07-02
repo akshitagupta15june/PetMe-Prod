@@ -6,8 +6,8 @@ function About() {
   return (
     <>
       <Header />
-      <main className="">
-      About 
+      <main className="pt-[8rem]">
+        About
       </main>
       <Footer />
     </>
