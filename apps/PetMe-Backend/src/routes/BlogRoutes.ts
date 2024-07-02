@@ -12,6 +12,7 @@ BlogRoutes.post("/", (req, res) => {
   blogController.createBlog(req, res)
 })
 
+
 BlogRoutes.get("/bulk", (req, res) => {
   blogController.getBlogs(req, res)
 })
