@@ -8,10 +8,10 @@ function Footer() {
     <footer className="bg-[#252628] h-full text-[#EEEEEE] py-6 px-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col lg:flex-row lg:gap-10 justify-center items-center py-10">
-          <img src={logo} alt="PetMe logo" className="w-20 h-20 rounded-full" />
+          <img src={logo} alt="PetMe logo" className="w-20 h-20 rounded-full transition-transform duration-300 ease-in-out hover:scale-110 drop-shadow-smoke" />
 
           <div className="text-center">
-            <h2 className="text-xl font-bold">Pet Me</h2>
+            <h2 className="text-3xl font-bold text-white font-poppins drop-shadow-[0_4px_4px_rgba(0,0,0,0.8),0_8px_8px_rgba(255,255,255,0.5)] transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">Pet Me</h2>
 
             <h2 className="text-sm mt-4">Give a life to an animal in need</h2>
           </div>
@@ -19,7 +19,7 @@ function Footer() {
 
         <div class="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">
               Navigation
             </h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -41,7 +41,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">
               Resources
             </h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -63,7 +63,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">
               Support
             </h2>
             <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -87,7 +87,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col justify-center gap-2">
-          <h3 className="text-xl text-center">Subscribe to our newsletter</h3>
+          <h3 className="text-3xl text-center">Subscribe to our newsletter</h3>
           <p className="text-md text-center">Get the latest news and updates</p>
           <p className="text-sm text-center">
             delivered straight to your inbox.
@@ -122,22 +122,22 @@ function Footer() {
         </span>
         <div className="flex mt-4 sm:justify-center sm:mt-0">
           <Link to="#">
-            <FaFacebookF className="w-4 h-4 hover:text-[#F2613F]" />
+            <FaFacebookF className="w-7 h-7 hover:text-[#F2613F]" />
             <span className="sr-only">Facebook page</span>
           </Link>
           <Link to="#" className="ms-5">
-            <FaInstagram className="w-4 h-4 hover:text-[#F2613F]" />
+            <FaInstagram className="w-7 h-7 hover:text-[#F2613F]" />
             <span className="sr-only">Instagram page</span>
           </Link>
           <Link to="https://x.com/Akshita_archer" className="ms-5">
-            <FaTwitter className="w-4 h-4 hover:text-[#F2613F]" />
+            <FaTwitter className="w-7 h-7 hover:text-[#F2613F]" />
             <span className="sr-only">Twitter</span>
           </Link>
           <Link
             to="https://github.com/akshitagupta15june/PetMe-Prod"
             className="ms-5"
           >
-            <FaGithub className="w-4 h-4 hover:text-[#F2613F]" />
+            <FaGithub className="w-7 h-7 hover:text-[#F2613F]" />
             <span className="sr-only">GitHub</span>
           </Link>
         </div>
