@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import buttons from '../../../../../helpers/buttonsForHeader';
+import * as React from "react"
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import buttons from "../../../../../helpers/buttonsForHeader"
 
 const variants = {
   open: {
@@ -18,7 +18,7 @@ const variants = {
       y: { stiffness: 1000 },
     },
   },
-};
+}
 
 function MenuItem() {
   return (
@@ -28,11 +28,8 @@ function MenuItem() {
       whileTap={{ scale: 0.95 }}
       className="w-[100vw] h-[100vh] top-0 right-0 p-4 text-center flex flex-col gap-5 justify-center items-center bg-white text-black"
     >
-      { buttons.map((button) => (
-        <motion.li
-          key={button.id}
-          className="p-2 hover:font-semibold"
-        >
+      {buttons.map((button) => (
+        <motion.li key={button.id} className="p-2 hover:font-semibold">
           <Link
             key={button.id}
             to={button.link}
@@ -43,7 +40,7 @@ function MenuItem() {
         </motion.li>
       ))}
     </motion.ul>
-  );
+  )
 }
 
-export default MenuItem;
+export default MenuItem

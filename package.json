@@ -29,6 +29,7 @@
     "@types/otp-generator": "^4.0.2",
     "bcrypt": "^5.1.1",
     "bcrypt-ts": "^5.0.2",
-    "brcypt": "^1.0.1"
+    "brcypt": "^1.0.1",
+    "dotenv": "^16.4.5"
   }
 }
