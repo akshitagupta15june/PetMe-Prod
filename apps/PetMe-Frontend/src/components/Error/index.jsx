@@ -6,10 +6,12 @@ function Error() {
   return (
     <div className="flex flex-col justify-center space-y-5 items-center align-middle">
       <img src={errorImage} alt='404' />
-      <h1 className='text-5xl font-bold bg-clip-text text-clip text-transparent bg-gradient-to-r from-orange-700 to-orange-300'>Oops!</h1>
-      <h3 className='text-2xl px-4 font-semibold'>
+      <h1 className='text-4xl uppercase font-bold bg-clip-text text-clip text-transparent bg-gradient-to-r from-orange-700 to-orange-300'>
+        Page Not Found
+      </h1>
+      <h3 className='text-xl px-4 font-medium'>
         {/* That page is currently under construction. Please be patient! */}
-        The page you are looking for doesn't exist or under construction.
+        Oops, the page you're looking for was moved, renamed, never exist or under construction!
       </h3>
       <div className='flex items-center space-x-32'>
         <Link
