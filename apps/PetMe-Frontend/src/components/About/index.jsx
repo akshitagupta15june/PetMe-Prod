@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import React, { useContext } from "react"
 import HeaderContext from "../../context/HeaderContext"
+import cat from "../../assets/animalsImages/cat.png"
 
 function index() {
   const { aboutSection } = useContext(HeaderContext)
@@ -32,19 +33,37 @@ function index() {
       animate={animateDiv}
       viewport={{ once: true }}
     >
-      <section className="max-w-screen-xl mx-auto p-6 flex flex-col items-center">
-        <h1 ref={aboutSection} className="text-white text-3xl lg:text-5xl py-4">
-          About
-        </h1>
-        <p className="text-[#696C72] text-center pb-4 text-sm lg:text-xl">
-          Our mission is to provide a platform that connects animal lovers with
-          pets in need of a forever home, while also providing emergency medical
-          care for stray animals in distress. We strive to make a difference in
-          the lives of these innocent creatures by offering options to Adopt,
-          Donate and through our SOS feature Report stray animals in need of
-          immediate assistance. Together, we can create a better world for all
-          animals.
-        </p>
+      <section className="max-w-screen-xl  mx-auto p-6 flex items-center">
+        <img src={cat} alt="" />
+
+        <div className="flex flex-col">
+          <h1
+            ref={aboutSection}
+            className="text-white text-center font-extrabold text-3xl lg:text-5xl py-4"
+          >
+            What makes us different?
+          </h1>
+          <div className="flex">
+            <p className="bg-yellow-300 p-2 rounded-2xl mr-2">
+              375 pet rescued
+            </p>
+            <p className="bg-yellow-300 p-2 rounded-2xl mr-2">
+              765 pet adopted
+            </p>
+            <p className="bg-yellow-300 p-2 rounded-2xl mr-2">550 reviews</p>
+          </div>
+          <p className="text-white  mt-10 text-center pb-4 text-sm lg:text-lg">
+            Our mission is to provide a platform that connects animal lovers
+            with pets in need of a forever home, while also providing emergency
+            medical care for stray animals in distress.
+            <br />
+            We strive to make a difference in the lives of these innocent
+            creatures by offering options to Adopt, Donate and through our SOS
+            feature Report stray animals in need of immediate assistance.
+            <br />
+            Together, we can create a better world for all animals.
+          </p>
+        </div>
       </section>
     </motion.div>
   )
