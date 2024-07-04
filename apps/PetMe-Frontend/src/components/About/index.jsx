@@ -43,7 +43,7 @@ function index() {
           >
             What makes us different?
           </h1>
-          <div className="flex text-center justify-center items-center">
+          <div className="flex text-center justify-center mt-4 items-center">
             <p className="bg-yellow-300 p-2 rounded-2xl mr-2">
               375 pets rescued
             </p>
