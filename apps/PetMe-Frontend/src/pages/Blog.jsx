@@ -7,7 +7,7 @@ function Blog() {
   return (
     <>
       <Header />
-      <main className="flex flex-col w-full justify-center">
+      <main className="flex pt-[6.25rem] flex-col w-full justify-center">
         <BlogTemplate />
       </main>
       <Footer />
