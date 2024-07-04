@@ -3,8 +3,42 @@ import animal from "../../assets/images/service-cat-dog.png"
 
 export default function Love() {
   return (
-    <div className="w-full h-full pt-10">
-      {/* <div className="text-4xl text-center font-bold"> Help Us, Help Them</div>
+    <div className="w-full pt-10 p-4 bg-yellow-400 flex flex-wrap">
+      <div className="w-full text-3xl md:text-5xl text-yellow-950 text-center font-extrabold">
+        Help Us, Help Them
+        <p className="text-yellow-800 pt-5 text-center text-lg">
+          Join us in our mission to provide care, comfort, and companionship to
+          pets in need.
+        </p>
+      </div>
+
+      <div className="w-full sm:w-1/2">
+        <img src={animal} alt="Cat and Dog" />
+      </div>
+      <div className="w-full pt-5 sm:w-1/2 sm:pl-5">
+        <div className="bg-yellow-100 w-3/5 text-center rounded-md p-5 mb-5 mx-auto">
+          <h2>
+            Your generosity can make a real difference in the lives of animals
+            in need.
+          </h2>
+          <button className="bg-orange-500 p-3 mt-3 rounded-full text-white font-bold">
+            Support Our Cause
+          </button>
+        </div>
+        <div className="bg-yellow-100 w-3/5 text-center rounded-md p-5 mb-5 mx-auto">
+          <h2>
+            From playful kittens to loyal dogs, there's a perfect match waiting
+            for you.
+          </h2>
+          <button className="bg-orange-500 p-3 mt-3 rounded-full text-white font-bold">
+            Find Your Best Friend
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+  {
+    /* <div className="text-4xl text-center font-bold"> Help Us, Help Them</div>
       <div className="w-[80vw] mx-auto h-fit sm:flex justify-evenly items-center">
         <div className="w-[20rem] flex flex-col gap-2  shadow-lg border border-gray-300 rounded-xl mt-20">
           <div className="w-full flex justify-center items-center">
@@ -96,41 +130,6 @@ export default function Love() {
 
       <div>
         <img src={animal} alt="" />
-      </div> */}
-
-      <div className="w-full bg-yellow-500 flex flex-wrap">
-        <div className="w-full text-4xl text-center font-bold">
-          Help Us, Help Them
-        </div>
-        <div className="w-full sm:w-1/2">
-          <img src={animal} alt="" />
-        </div>
-        <div className="w-full mt-5 sm:w-1/2">
-          <div>
-            <h2>
-              {" "}
-              Join us in our mission to provide care, comfort, and companionship
-              to pets in need.
-            </h2>
-          </div>
-          <div>
-            <h2>
-              {" "}
-              Your generosity can make a real difference in the lives of animals
-              in need.
-            </h2>
-            <button> Support Our Cause</button>
-          </div>
-          <div>
-            <h2>
-              {" "}
-              From playful kittens to loyal dogs, there's a perfect match
-              waiting for you.
-            </h2>
-            <button> Find Your Best Friend</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+      </div> */
+  }
 }
