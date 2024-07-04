@@ -8,7 +8,7 @@ function AnimalsCard() {
   return (
     <>
       <div className="bg-[#008170]">
-        <h1 className="text-5xl font-extrabold text-center text-white my-10 py-3">
+        <h1 className=" text-2xl sm:text-3xl lg:text-5xl font-extrabold text-center text-white my-10 py-3">
           Meet our Friends
         </h1>
         <motion.div
@@ -30,16 +30,17 @@ function AnimalsCard() {
                 alt={animal.name}
                 className="rounded-md w-[20rem] h-[20rem]"
               /> */}
-                <div className="bg-[#FAF0E6] p-3 m-3 rounded-md">
-                  <div className="relative flex justify-center items-center">
-                    <div className="bg-[#EE8572] rounded-full w-[20rem] h-[20rem] flex justify-center items-center">
-                      <img
-                        src={animal.image}
-                        alt={animal.name}
-                        className="rounded-md w-[20rem] h-[20rem] transform -translate-y-4"
-                      />
-                    </div>
+
+                <div className="relative flex justify-center items-center">
+                  <div className="bg-[#EE8572] rounded-full w-[20rem] h-[20rem] flex justify-center items-center">
+                    <img
+                      src={animal.image}
+                      alt={animal.name}
+                      className="rounded-md w-[20rem] h-[20rem] transform -translate-y-4"
+                    />
                   </div>
+                </div>
+                <div className="bg-[#FAF0E6] m-3  rounded-md">
                   <h1 className="self-center text-3xl font-bold">
                     {animal.name}
                   </h1>

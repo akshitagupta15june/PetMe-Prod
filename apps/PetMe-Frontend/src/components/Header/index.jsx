@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { motion } from "framer-motion"
 import buttons from "../../helpers/buttonsForHeader"
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/logo.png"
 import MobileMenu from "./components/MobileHeader"
 import HeaderContext from "../../context/HeaderContext"
 

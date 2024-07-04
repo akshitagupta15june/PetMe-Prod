@@ -7,7 +7,7 @@ export default function OurService() {
     <section className="w-full  bg-pink-100">
       <div className="w-full mx-auto">
         {/* Title */}
-        <div className="text-5xl font-extrabold text-center text-gray-800 my-10 py-3">
+        <div className=" text-2xl sm:text-3xl lg:text-5xl font-extrabold text-center text-gray-800 my-10 py-3">
           What We Offer:
         </div>
 
