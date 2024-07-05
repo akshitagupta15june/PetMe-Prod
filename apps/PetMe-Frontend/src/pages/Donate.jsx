@@ -8,7 +8,7 @@ function Donate() {
   return (
     <section className="grid-template">
       <Header />
-      <main className="">
+      <main className="pt-[6rem]">
         <DonateForms />
       </main>
       <Footer />

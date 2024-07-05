@@ -4,12 +4,15 @@ import buttons from '../../helpers/buttonsForHeader';
 import logo from '../../assets/images/logo.jpg';
 import MobileMenu from './components/MobileHeader';
 import HeaderContext from '../../context/HeaderContext';
+import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
   const { scrollDown } = useContext(HeaderContext);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(false);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const [activePage, setActivePage] = React.useState('Home');
+  const location = useLocation();
   const MOBILE_WIDTH = 1022;
 
   useEffect(() => {
@@ -27,9 +30,21 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const currentButton = buttons.find((button) => button.link === currentPath);
+    if (currentButton) {
+      setActivePage(currentButton.name);
+    } else {
+      setActivePage('Home');
+    }
+  }, [location.pathname, buttons]);
+
+  console.log(activePage, location.pathname)
+
   if (isMobile || isMenuOpen) {
     return (
-      <MobileMenu handleMenu={handleMenu} isMenuOpen={isMenuOpen} />
+      <MobileMenu handleMenu={handleMenu} isMenuOpen={isMenuOpen} activePage={activePage} />
     );
   }
 
@@ -37,7 +52,7 @@ function Header() {
     <>
       <motion.header
         id="header"
-        className="text-black bg-white flex items-center justify-between"
+        className="w-full fixed h-[96px] border-b shadow-md text-black bg-white flex items-center justify-between"
       >
         <div className="flex items-center md:items-center p-5 ml-10" id="logo">
           <a href="/">
@@ -46,23 +61,23 @@ function Header() {
         </div>
 
         <nav className="flex items-center gap-3 justify-center">
-          { buttons.map((button) => (
-            <a
+          {buttons.map((button) => (
+            <Link
               key={button.id}
               id={button.id}
-              href={button.link === '' ? undefined : button.link}
-              // onClick={button.name !== 'About' ? (() => {}) : scrollDown}
-              className="items tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem]"
+              to={button.link === '' ? undefined : button.link}
+              className={`items uppercase tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem]
+                ${activePage === button.name && "font-semibold"}`}
             >
               {button.name}
-            </a>
+            </Link>
           ))}
 
           <button
             type="button"
-            className="items tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem] mr-12"
+            className="items uppercase tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem] mr-12"
             onClick={() => setIsModalOpen(!isModalOpen)}>
-            CONTACT US
+            Contact Us
           </button>
         </nav>
 
