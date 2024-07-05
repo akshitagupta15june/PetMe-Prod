@@ -16,6 +16,8 @@ import ContactUs from './pages/ContactUs';
 import About from './pages/About';
 import Pets from './pages/Pets';
 import PetDetails from './pages/PetDetails';
+// import SignInForm from './components/Authentication/SignInForm';
+// import SignUpForm from './components/Authentication/SignUpForm';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,13 @@ const router = createBrowserRouter([
     path: '/petdetails',
     element: <PetDetails />,
   }
+  // ,{
+  //   path: '/forms',
+  //   element: <div className='min-h-screen flex flex-col items-center justify-center gap-10'>
+  //     <SignInForm />
+  //     <SignUpForm />
+  //   </div>
+  // }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
