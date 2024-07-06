@@ -2,6 +2,7 @@ import * as React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import buttons from "../../../../../helpers/buttonsForHeader"
+import propTypes from "prop-types"
 
 const variants = {
   open: {
@@ -20,20 +21,20 @@ const variants = {
   },
 }
 
-function MenuItem() {
+function MenuItem({ activePage }) {
   return (
     <motion.ul
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="w-[100vw] h-[100vh] top-0 right-0 p-4 text-center flex flex-col gap-5 justify-center items-center bg-white text-black"
+      className="w-[100vw] h-[100vh] top-0 right-0 text-center flex flex-col gap-5 justify-center items-center bg-white text-black"
     >
       {buttons.map((button) => (
         <motion.li key={button.id} className="p-2 hover:font-semibold">
           <Link
             key={button.id}
             to={button.link}
-            className="text-black text-2xl font-bold"
+            className={`text-black uppercase text-xl ${activePage === button.name && "font-bold"}`}
           >
             {button.name}
           </Link>
@@ -41,6 +42,10 @@ function MenuItem() {
       ))}
     </motion.ul>
   )
+}
+
+MenuItem.propTypes = {
+  activePage: propTypes.string.isRequired,
 }
 
 export default MenuItem

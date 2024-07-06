@@ -7,7 +7,7 @@ function Report() {
   return (
     <section className="grid-template">
       <Header />
-      <main className="flex flex-col w-full justify-center">
+      <main className="flex pt-[8rem] flex-col w-full justify-center">
         <Error />
       </main>
       <Footer />
