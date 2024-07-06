@@ -33,7 +33,7 @@ function Index() {
       animate={animateDiv}
       viewport={{ once: true }}
     >
-      <section className="max-w-screen-xl min-h-screen mx-auto p-10 flex flex-col md:flex-row items-center">
+      <section className="min-h-screen mx-auto p-10 flex flex-col md:flex-row items-center sm:h-[50vh]">
         <img
           src={cat}
           alt=""

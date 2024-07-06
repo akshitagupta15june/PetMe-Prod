@@ -69,7 +69,7 @@ function AnimalsCard() {
 
                     <button
                       type="button"
-                      className="bg-blue-950 text-white w-52 p-4 focus:outline-none font-bold rounded md:mt-2 col-span-2"
+                      className="bg-blue-900 text-white w-52 p-4 focus:outline-none font-bold rounded md:mt-2 col-span-2 hover:bg-blue-950"
                     >
                       <a href="/adopt">Adopt</a>
                     </button>

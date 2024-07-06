@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="flex pt-[6rem] flex-col w-full">
+      <main className="flex flex-col w-full">
         <Hero />
         <About />
         <AnimalsCard />

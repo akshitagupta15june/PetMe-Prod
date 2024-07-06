@@ -1,7 +1,7 @@
 import React from "react"
 import propTypes from "prop-types"
 import { motion } from "framer-motion"
-import logo from "../../../../assets/images/logo.jpg"
+import logo from "../../../../assets/logo.png"
 import MenuToggle from "./MenuToggle"
 import MenuItem from "./MenuItem"
 import { Link } from "react-router-dom"

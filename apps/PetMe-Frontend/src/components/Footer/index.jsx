@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaGithub, FaTwitter } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer className="bg-blue-950 h-full text-[#EEEEEE] py-6 px-10">
+    <footer className="bg-blue-950 h-full text-[#EEEEEE] py-9 px-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col lg:flex-row lg:gap-10 justify-center items-center py-10">
           <img

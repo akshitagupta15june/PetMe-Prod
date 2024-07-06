@@ -31,10 +31,13 @@ export default function OurService() {
         {/* Image */}
         <div className="w-full flex justify-end mt-6">
           <div className="w-full max-w-[20rem] overflow-hidden">
+            <p className=" text-sm text-pink-800 font-semibold">
+              Adopt Me Hooman! Your home needs an owner
+            </p>
             <img
               src={ourServiceCover}
               className="w-full h-auto object-cover"
-              alt="Dog Image"
+              alt="Cat Image"
             />
           </div>
         </div>

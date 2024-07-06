@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react"
 import { motion } from "framer-motion"
 import buttons from "../../helpers/buttonsForHeader"
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/logo.png"
 import MobileMenu from "./components/MobileHeader"
 import HeaderContext from "../../context/HeaderContext"
 import { Link, useLocation } from "react-router-dom"
@@ -56,7 +56,7 @@ function Header() {
     <>
       <motion.header
         id="header"
-        className="w-full fixed h-[96px] border-b shadow-md text-black bg-blue-950 flex items-center justify-between"
+        className="w-full h-[96px]  shadow-md text-black bg-blue-950 flex items-center justify-between"
       >
         <div className="flex items-center md:items-center p-5 ml-10" id="logo">
           <a href="/">
@@ -70,7 +70,7 @@ function Header() {
               key={button.id}
               id={button.id}
               to={button.link === "" ? undefined : button.link}
-              className={`items uppercase tracking-widest p-2 font-medium cursor-pointer text-black hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem]
+              className={`items uppercase tracking-widest p-2 font-medium cursor-pointer text-white hover:font-semibold lg:text-[0.7rem] xl:text-[0.9rem]
                 ${activePage === button.name && "font-semibold"}`}
             >
               {button.name}
