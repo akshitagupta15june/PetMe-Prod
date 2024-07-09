@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import buttons from '../../../../../helpers/buttonsForHeader';
-import propTypes from 'prop-types';
-
+import * as React from "react"
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import buttons from "../../../../../helpers/buttonsForHeader"
+import propTypes from "prop-types"
 
 const variants = {
   open: {
@@ -20,7 +19,7 @@ const variants = {
       y: { stiffness: 1000 },
     },
   },
-};
+}
 
 function MenuItem({ activePage }) {
   return (
@@ -31,10 +30,7 @@ function MenuItem({ activePage }) {
       className="w-[100vw] h-[100vh] top-0 right-0 text-center flex flex-col gap-5 justify-center items-center bg-white text-black"
     >
       {buttons.map((button) => (
-        <motion.li
-          key={button.id}
-          className="p-2 hover:font-semibold"
-        >
+        <motion.li key={button.id} className="p-2 hover:font-semibold">
           <Link
             key={button.id}
             to={button.link}
@@ -45,11 +41,11 @@ function MenuItem({ activePage }) {
         </motion.li>
       ))}
     </motion.ul>
-  );
+  )
 }
 
 MenuItem.propTypes = {
   activePage: propTypes.string.isRequired,
-};
+}
 
-export default MenuItem;
+export default MenuItem

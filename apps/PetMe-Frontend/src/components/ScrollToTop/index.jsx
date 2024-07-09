@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { IoIosArrowDropupCircle } from 'react-icons/io';
+import React, { useState } from "react"
+import { IoIosArrowDropupCircle } from "react-icons/io"
 
 const ScrollToTop = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
 
   const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 250) {
-      setVisible(true);
+    const scrolled = document.documentElement.scrollTop
+    if (scrolled > 400) {
+      setVisible(true)
     } else if (scrolled <= 250) {
-      setVisible(false);
+      setVisible(false)
     }
-  };
+  }
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
-    });
-  };
+      behavior: "smooth",
+    })
+  }
 
-  window.addEventListener('scroll', toggleVisible);
+  window.addEventListener("scroll", toggleVisible)
 
   return (
     <>
@@ -29,13 +29,13 @@ const ScrollToTop = () => {
           data-testid="scrollToTopIcon"
           onClick={scrollToTop}
           style={{
-            display: visible ? 'inline' : 'none',
-            color: '#7C2D12',
+            display: visible ? "inline" : "none",
+            color: "#7C2D12",
           }}
         />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ScrollToTop;
+export default ScrollToTop

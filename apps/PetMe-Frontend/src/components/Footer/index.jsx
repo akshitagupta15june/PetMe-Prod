@@ -1,17 +1,23 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import logo from "../../assets/images/logo.jpg"
+import logo from "../../assets/logo.png"
 import { FaFacebookF, FaInstagram, FaGithub, FaTwitter } from "react-icons/fa"
 
 function Footer() {
   return (
-    <footer className="bg-[#252628] h-full text-[#EEEEEE] py-6 px-10">
+    <footer className="bg-blue-950 h-full text-[#EEEEEE] py-9 px-10">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col lg:flex-row lg:gap-10 justify-center items-center py-10">
-          <img src={logo} alt="PetMe logo" className="w-20 h-20 rounded-full transition-transform duration-300 ease-in-out hover:scale-110 drop-shadow-smoke" />
+          <img
+            src={logo}
+            alt="PetMe logo"
+            className="w-20 h-20 rounded-full transition-transform duration-300 ease-in-out hover:scale-110 drop-shadow-smoke"
+          />
 
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white font-poppins drop-shadow-[0_4px_4px_rgba(0,0,0,0.8),0_8px_8px_rgba(255,255,255,0.5)] transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">Pet Me</h2>
+            <h2 className="text-3xl font-bold text-white font-poppins drop-shadow-[0_4px_4px_rgba(0,0,0,0.8),0_8px_8px_rgba(255,255,255,0.5)] transition-all duration-500 ease-in-out transform hover:scale-105 hover:text-gray-200">
+              Pet Me
+            </h2>
 
             <h2 className="text-sm mt-4">Give a life to an animal in need</h2>
           </div>
