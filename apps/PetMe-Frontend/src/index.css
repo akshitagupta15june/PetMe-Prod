@@ -1,39 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Ubuntu:wght@500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 html {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* blob */
-.hero-blob{
-    background-image: url(https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    width: 480px;
-    height: 480px;
-    background-size: cover;
-    -webkit-background-position: center;
-    background-position: center center;
-    margin: 20px;
-    box-shadow: 0 5px 5px 5px rgba(250, 77, 86, 0.2);
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+.hero-blob {
+  background-image: url(https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  width: 480px;
+  height: 480px;
+  background-size: cover;
+  -webkit-background-position: center;
+  background-position: center center;
+  margin: 20px;
+  box-shadow: 0 5px 5px 5px rgba(250, 77, 86, 0.2);
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
 }
 
 @keyframes animate {
-    0%, 100%{
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50%{
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
 }
