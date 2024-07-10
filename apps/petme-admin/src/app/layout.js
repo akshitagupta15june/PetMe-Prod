@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/shared/sidebar";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700"], });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <div className="min-h-screen flex flex-auto flex-shrink-0 antialiased bg-white text-gray-800">
+          <Sidebar />
+          <div className="w-full bg-slate-200">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
