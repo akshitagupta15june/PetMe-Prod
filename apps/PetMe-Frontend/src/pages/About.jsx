@@ -71,7 +71,7 @@ function About() {
               {/* <span className="block mt-2 font-bold">
                 Together, we can create a better world for all animals.
               </span> */}
-              <span className="block mt-2 text-xl md:text-2xl  text-pink-200 font-black">
+              <span className="block mt-2 text-lg md:text-2xl  text-pink-200 font-black">
                 Together, we can create a better world for all animals.
               </span>
             </p>
