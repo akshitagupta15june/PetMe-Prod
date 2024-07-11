@@ -9,7 +9,7 @@ export function BlogTemplate() {
 
   return (
     <>
-      <div className="bg-[#187666] ">
+      <div className="bg-[#187666] pt-4">
         <div className="flex flex-col h-[150px] items-center justify-start w-full md:mb-0 md:h-[300px]  xl:h-[400px]">
           <img
             src={HeroPhoto}
@@ -17,7 +17,7 @@ export function BlogTemplate() {
             className="w-full object-cover"
           />
           <h2
-            className="text-xl  text-yellow-300 font-bold text-center md:text-4xl"
+            className="text-lg text-yellow-300 font-bold text-center md:text-3xl"
             style={font()}
           >
             A Blog For Pet Lovers And Their Pet Stories
@@ -37,18 +37,18 @@ export function BlogTemplate() {
               <h2 className="text-md text-yellow-300 sm:text-xl font-bold text-center">
                 {post.title}
               </h2>
-              <p className="text-justify text-white text-sm sm:text-md ">
+              <p className="text-justify text-white text-xs sm:text-lg ">
                 {post.description}
               </p>
               <a
                 href={post.read}
-                className="text-center text-amber-700 bg-yellow-400 rounded-full p-2 hover:text-amber-900 font-bold"
+                className="text-center text-sm sm:text-lg text-amber-700 bg-yellow-400 rounded-full p-2 hover:text-amber-900 font-bold"
               >
                 Read more
               </a>
             </div>
           ))}
-        </div>{" "}
+        </div>
       </div>
     </>
   )

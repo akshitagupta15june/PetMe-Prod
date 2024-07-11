@@ -1,22 +1,21 @@
 import React from "react"
 import FormsInput from "./components/FormsInput"
 import inputs from "../../helpers/inputsForDonateForms"
-import cat from "../../assets/animalsImages/cat-annoyed.png"
 import dog from "../../assets/animalsImages/dog-happy.png"
 
 function DonateForms() {
   return (
-    <section className=" bg-pink-200 flex flex-col items-center  w-full">
+    <section className=" bg-pink-200 flex flex-col items-center p-5 w-full">
       <div className="items-center justify-center relative flex">
-        <p className="bg-red-400 absolute left-10 sm: text-xs md:text-sm font-bold text-white p-2 rounded-full w-fit ">
+        <p className="bg-red-400 absolute left-5 text-xs md:text-sm font-bold text-white p-2 rounded-full w-fit ">
           Yes !! I want new frens
         </p>
         <img src={dog} alt="Dog" className="w-full sm:w-1/3 lg:w-2/3" />
       </div>
 
       <div className="text-center my-10">
-        <p className="sm:text-4xl font-black text-4xl title-font mb-4 text-pink-600">
-          Fill up the form below and donate your pets.
+        <p className="  text-xl sm:text-lg md:text-4xl font-black title-font mb-4 text-pink-600">
+          Fill up the form below to donate your pets.
         </p>
       </div>
 
@@ -68,7 +67,7 @@ function DonateForms() {
       <div>
         <input type="checkbox" name="check" id="check" required />
 
-        <span className="p-1 font-medium text-gray-900">
+        <span className="p-1 font-medium text-gray-900 pt-4">
           I have read and agree to the Terms and Conditions of PetMe.
         </span>
       </div>
@@ -76,7 +75,7 @@ function DonateForms() {
       <div>
         <button
           type="submit"
-          className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          className="flex mx-auto text-white bg-indigo-500 border-0 mt-4 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
         >
           Submit
         </button>
