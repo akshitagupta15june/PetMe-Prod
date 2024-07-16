@@ -1,18 +1,17 @@
 import React from "react"
-import goldie from "../../assets/animalsImages/goldie.png"
 
 function Sample() {
   return (
-    <div className="h-auto bg-blue-950 ">
+    <div className="h-auto bg-gradient-to-t from-rose-100 to-white">
       <div className="block sm:flex h-full py-10 sm:h-[80vh] justify-between w-3/4 mx-auto">
         <div className="flex h-auto items-center justify-center">
           <div className="">
-            <div className="text-center text-5xl md:text-left md:text-8xl md:leading-snug font-extrabold font-sans text-white">
-              <span className="text-[#FA4D56]">Adopt</span>
+            <div className="text-center sm:text-left text-2xl sm:text-5xl sm:leading-snug font-extrabold font-sans text-slate-700">
+              Find Your <span className="text-[#FA4D56]">Furry</span> Friend{" "}
               <br />
-              Don't Shop
+              Adopt, Love, <br />
+              Transform Lives !
             </div>
-
             <button className="bg-[#FA4D56] mx-auto sm:mx-0 mt-6 text-sm  sm:text-md px-4 py-2 rounded-lg text-white border-2 font-sans font-bold flex items-center space-x-2 hover:bg-rose-50 hover:text-[#FA4D56] hover:border-[#FA4D56] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,13 +29,12 @@ function Sample() {
                   fill="currentColor"
                 />
               </svg>
-              <span>Adopt Now!</span>
+              <span>Adopt Me</span>
             </button>
           </div>
         </div>
         <div className="hidden sm:visible h-full sm:flex justify-center items-center">
-          {/* <div className="hero-blob"> */} <img src={goldie} alt="" />{" "}
-          {/* </div> */}
+          <div className="hero-blob"></div>
         </div>
       </div>
     </div>
