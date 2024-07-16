@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react"
-import ourServiceCover from "../../assets/images/ourServiceCover.png"
+import ourServiceCover from "../../assets/images/ourServiceCover.jpg"
 import Card from "./Card.jsx"
 export default function OurService() {
   return (
