@@ -1,12 +1,11 @@
 import React from "react"
-
 export default function Card(props) {
   return (
-    <section className=" sm:w-[50%] md:w-[60%]  text-center bg-pink-800 p-4 rounded-xl  hover:bg-pink-900 text-white hover:cursor-pointer flex flex-col justify-between">
-      {/* Title */}
-      <div className="text-lg  sm:text-base font-bold">{props.title}</div>
-      {/* Content */}
-      <div className="flex-1 leading-normal text-pink-100 text-sm text-justify">
+    <section className="w-full sm:w-[65%] bg-white h-fit p-6 rounded-xl space-y-4  border-2 border-white hover:border-amber-600 hover:cursor-pointer">
+      {/*title*/}
+      <div className="text-xl font-bold"> {props.title} </div>
+      {/*content*/}
+      <div className="leading-normal text-gray-500 text-sm text-justify">
         {props.content}
       </div>
     </section>

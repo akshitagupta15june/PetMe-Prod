@@ -1,19 +1,19 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import DonateForms from '../components/DonateForms';
-import '../styles/Donate/Donate.style.css';
+import React from "react"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import DonateForms from "../components/DonateForms"
+import "../styles/Donate/Donate.style.css"
 
 function Donate() {
   return (
-    <section className="grid-template">
+    <section>
       <Header />
-      <main className="pt-[6rem]">
+      <main>
         <DonateForms />
       </main>
       <Footer />
     </section>
-  );
+  )
 }
 
-export default Donate;
+export default Donate

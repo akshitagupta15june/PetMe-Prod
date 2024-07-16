@@ -1,5 +1,5 @@
-import { createContext } from 'react';
+import { createContext } from "react"
 
-const HeaderContext = createContext();
+const HeaderContext = createContext()
 
-export default HeaderContext;
+export default HeaderContext
