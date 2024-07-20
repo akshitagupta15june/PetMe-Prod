@@ -1,0 +1,19 @@
+.search-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.open-popup-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.open-popup-button:hover {
+    background-color: #2980b9;
+}
